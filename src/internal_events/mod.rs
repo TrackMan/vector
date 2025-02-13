@@ -53,6 +53,8 @@ mod exec;
 mod file_descriptor;
 #[cfg(feature = "transforms-filter")]
 mod filter;
+#[cfg(feature = "transforms-window")]
+mod window;
 #[cfg(feature = "sources-fluent")]
 mod fluent;
 #[cfg(feature = "sources-gcp_pubsub")]
@@ -265,6 +267,8 @@ pub(crate) use self::unix::*;
 pub(crate) use self::websocket::*;
 #[cfg(feature = "sinks-websocket-server")]
 pub(crate) use self::websocket_server::*;
+#[cfg(feature = "transforms-window")]
+pub(crate) use self::window::*;
 #[cfg(windows)]
 pub(crate) use self::windows::*;
 pub use self::{
